@@ -4,7 +4,7 @@
 using namespace std;
 
 void porValor(int a);
-void porRefencia(int &a);
+void porReferencia(int &a);
 
 int main(){
     int num=5;
@@ -12,6 +12,19 @@ int main(){
     porValor(num);
     cout<<"Luego de pasar de valor, num = "<<num<<endl;
 
-    
+    cout<<"Antes de pasar por referencia, num = "<<num<<endl;
+    porReferencia(num);
+    cout<<"Luego de pasar por referencia, num = "<<num<<endl;
     return 0;
+}
+
+//Definimos las funciones:
+void porValor(int a){
+    a=10;
+    cout<<"Dentro de porValor, a = "<<a<<endl;
+}
+
+void porReferencia(int &a){
+    a=10;
+    cout<<"Dentro de porRefencia, a = "<<a<<endl;
 }
